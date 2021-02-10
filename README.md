@@ -1,3 +1,3 @@
 ### Simple UserProfile UI Design
 
-<img src= "screenshots/SimpleUIScreenShot.png" width="250px">
+<img src= "screenshots/SimpleUIScreenShot.jpg" width="250px">
