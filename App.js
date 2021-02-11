@@ -11,7 +11,7 @@ export default function App() {
         </Text>
       </View>
       <View style={styles.dispaly}>
-        <Text style={{ color: "white", fontWeight: "bold", fontSize: 50 }}>
+        <Text style={{ color: "white", fontWeight: "bold", fontSize: 75 }}>
           0
         </Text>
       </View>
@@ -39,7 +39,7 @@ export default function App() {
           </View>
           <View style={styles.no}>
             <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
-              0
+              %
             </Text>
           </View>
         </View>
@@ -71,7 +71,7 @@ export default function App() {
                 fontWeight: "bold",
                 fontSize: 20,
               }}>
-              %
+              0
             </Text>
           </View>
         </View>
@@ -102,7 +102,7 @@ export default function App() {
             </Text>
           </View>
         </View>
-        <View>
+        <View style={styles.last}>
           <View style={styles.no}>
             <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
               C
@@ -147,17 +147,16 @@ const styles = StyleSheet.create({
   },
   number: {
     flex: 8,
-    backgroundColor: "white",
     margin: 15,
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     alignItems: "flex-start",
     flexDirection: "row",
   },
   no: {
-    height: 50,
-    width: 50,
+    width: 75,
     flex: 1,
-    margin: 10,
+    margin: 5,
+    borderRadius: 20,
     backgroundColor: "gray",
     alignItems: "center",
     justifyContent: "center",
