@@ -1,5 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  TouchableNativeFeedback,
+  TouchableHighlight,
+} from "react-native";
 
 const CustomButton = (props) => {
   return (
@@ -16,15 +24,35 @@ const CustomButton = (props) => {
 };
 const CustomButton2 = (props) => {
   return (
-    <TouchableOpacity
-      activeOpacity={0.5}
-      onPress={props.onButtonPlaceCustomEventHandler}>
+    <TouchableHighlight onPress={props.onButtonPlaceCustomEventHandler}>
       <View style={{ ...style.button, backgroundColor: props.color }}>
         <Text style={{ ...style.buttonText, color: props.textColor }}>
           {props.title}
         </Text>
       </View>
-    </TouchableOpacity>
+    </TouchableHighlight>
+  );
+};
+const CustomButton3 = (props) => {
+  return (
+    <TouchableNativeFeedback onPress={props.onButtonPlaceCustomEventHandler}>
+      <View style={{ ...style.button, backgroundColor: props.color }}>
+        <Text style={{ ...style.buttonText, color: props.textColor }}>
+          {props.title}
+        </Text>
+      </View>
+    </TouchableNativeFeedback>
+  );
+};
+const CustomButton4 = (props) => {
+  return (
+    <TouchableWithoutFeedback onPress={props.onButtonPlaceCustomEventHandler}>
+      <View style={{ ...style.button, backgroundColor: props.color }}>
+        <Text style={{ ...style.buttonText, color: props.textColor }}>
+          {props.title}
+        </Text>
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 const style = StyleSheet.create({
@@ -41,4 +69,4 @@ const style = StyleSheet.create({
   },
 });
 
-export { CustomButton, CustomButton2 };
+export { CustomButton, CustomButton2, CustomButton3, CustomButton4 };
